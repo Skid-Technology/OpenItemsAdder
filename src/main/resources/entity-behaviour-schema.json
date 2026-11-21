@@ -1,0 +1,1559 @@
+{
+  "gather_items": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "items": {
+      "type": "item_matchers",
+      "required": true
+    },
+    "capacity": {
+      "type": "integer",
+      "default": 64,
+      "min": 1,
+      "max": 4096
+    },
+    "delivery": {
+      "type": "enum",
+      "default": "player",
+      "values": [
+        "player",
+        "owner",
+        "container",
+        "home"
+      ]
+    },
+    "destination_blocks": {
+      "type": "materials",
+      "default": [
+        "CHEST",
+        "BARREL"
+      ]
+    },
+    "delivery_range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "transfer_amount": {
+      "type": "integer",
+      "default": 16,
+      "min": 1,
+      "max": 64
+    }
+  },
+  "transport_items": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    },
+    "items": {
+      "type": "item_matchers",
+      "required": true
+    },
+    "capacity": {
+      "type": "integer",
+      "default": 64,
+      "min": 1,
+      "max": 4096
+    },
+    "delivery": {
+      "type": "enum",
+      "default": "player",
+      "values": [
+        "player",
+        "owner",
+        "container",
+        "home"
+      ]
+    },
+    "destination_blocks": {
+      "type": "materials",
+      "default": [
+        "BARREL"
+      ]
+    },
+    "delivery_range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "transfer_amount": {
+      "type": "integer",
+      "default": 16,
+      "min": 1,
+      "max": 64
+    },
+    "source_blocks": {
+      "type": "materials",
+      "default": [
+        "CHEST"
+      ]
+    }
+  },
+  "seek_land": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    }
+  },
+  "seek_shelter": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    }
+  },
+  "avoid_blocks": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    },
+    "blocks": {
+      "type": "materials",
+      "required": true
+    },
+    "avoid_distance": {
+      "type": "number",
+      "default": 6,
+      "min": 1,
+      "max": 16
+    }
+  },
+  "rest_at_block": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    },
+    "blocks": {
+      "type": "materials",
+      "required": true
+    },
+    "roost": {
+      "type": "boolean",
+      "default": false
+    },
+    "rest_ticks": {
+      "type": "integer",
+      "default": 100,
+      "min": 1,
+      "max": 72000
+    },
+    "heal_amount": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 2048
+    }
+  },
+  "investigate_disturbance": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "memory_ticks": {
+      "type": "integer",
+      "default": 200,
+      "min": 1,
+      "max": 72000
+    },
+    "hearing_range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "events": {
+      "type": "strings",
+      "default": []
+    },
+    "anger_per_event": {
+      "type": "number",
+      "default": 1,
+      "min": 0,
+      "max": 100
+    },
+    "anger_threshold": {
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 1000
+    }
+  },
+  "charge_attack": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "prepare_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "recovery_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "damage": {
+      "type": "number",
+      "default": 4,
+      "min": 0,
+      "max": 2048
+    },
+    "knockback": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 8
+    },
+    "require_line_of_sight": {
+      "type": "boolean",
+      "default": true
+    },
+    "active_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 200
+    },
+    "contact_radius": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "motion": {
+      "type": "enum",
+      "default": "navigate",
+      "values": [
+        "navigate",
+        "velocity"
+      ]
+    },
+    "velocity": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 3
+    },
+    "vertical_velocity": {
+      "type": "number",
+      "default": 0,
+      "min": -2,
+      "max": 2
+    }
+  },
+  "projectile_attack": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "prepare_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "recovery_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "damage": {
+      "type": "number",
+      "default": 4,
+      "min": 0,
+      "max": 2048
+    },
+    "knockback": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 8
+    },
+    "require_line_of_sight": {
+      "type": "boolean",
+      "default": true
+    },
+    "projectile": {
+      "type": "projectile",
+      "default": "ARROW"
+    },
+    "projectile_speed": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.01,
+      "max": 4
+    },
+    "burst_count": {
+      "type": "integer",
+      "default": 1,
+      "min": 1,
+      "max": 16
+    },
+    "burst_interval": {
+      "type": "integer",
+      "default": 5,
+      "min": 1,
+      "max": 100
+    },
+    "effects": {
+      "type": "effects",
+      "default": {}
+    },
+    "incendiary": {
+      "type": "boolean",
+      "default": false
+    },
+    "explosion_power": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 4
+    }
+  },
+  "beam_attack": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "prepare_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "recovery_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "damage": {
+      "type": "number",
+      "default": 4,
+      "min": 0,
+      "max": 2048
+    },
+    "knockback": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 8
+    },
+    "require_line_of_sight": {
+      "type": "boolean",
+      "default": true
+    },
+    "effects": {
+      "type": "effects",
+      "default": {}
+    },
+    "beam_particles": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "area_attack": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "prepare_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "recovery_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "damage": {
+      "type": "number",
+      "default": 4,
+      "min": 0,
+      "max": 2048
+    },
+    "knockback": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 8
+    },
+    "require_line_of_sight": {
+      "type": "boolean",
+      "default": true
+    },
+    "effects": {
+      "type": "effects",
+      "default": {}
+    },
+    "entities": {
+      "type": "entity_types",
+      "default": []
+    },
+    "affect_group": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "summon_attack": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "prepare_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "recovery_ticks": {
+      "type": "integer",
+      "default": 20,
+      "min": 0,
+      "max": 1200
+    },
+    "damage": {
+      "type": "number",
+      "default": 4,
+      "min": 0,
+      "max": 2048
+    },
+    "knockback": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 8
+    },
+    "require_line_of_sight": {
+      "type": "boolean",
+      "default": true
+    },
+    "entity": {
+      "type": "summon_entity",
+      "required": true
+    },
+    "count": {
+      "type": "integer",
+      "default": 1,
+      "min": 1,
+      "max": 8
+    },
+    "summon_limit": {
+      "type": "integer",
+      "default": 8,
+      "min": 1,
+      "max": 32
+    },
+    "summon_lifetime": {
+      "type": "integer",
+      "default": 600,
+      "min": 20,
+      "max": 72000
+    },
+    "spawn_radius": {
+      "type": "number",
+      "default": 2,
+      "min": 0,
+      "max": 8
+    }
+  },
+  "orbit_target": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "orbit_radius": {
+      "type": "number",
+      "default": 6,
+      "min": 1,
+      "max": 16
+    },
+    "angular_speed": {
+      "type": "number",
+      "default": 6,
+      "min": 1,
+      "max": 45
+    },
+    "clockwise": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "defensive_state": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 200,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 100,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "damage_multiplier": {
+      "type": "number",
+      "default": 0.5,
+      "min": 0,
+      "max": 4
+    },
+    "heal_amount": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 2048
+    },
+    "movement_lock": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "periodic_effect": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 1,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "prepare_ticks": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 1200
+    },
+    "recovery_ticks": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 1200
+    },
+    "damage": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 2048
+    },
+    "knockback": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 8
+    },
+    "require_line_of_sight": {
+      "type": "boolean",
+      "default": true
+    },
+    "range": {
+      "type": "number",
+      "default": 8,
+      "min": 1,
+      "max": 32
+    },
+    "target": {
+      "type": "enum",
+      "default": "self",
+      "values": [
+        "self",
+        "target",
+        "nearby"
+      ]
+    },
+    "effects": {
+      "type": "effects",
+      "default": {}
+    },
+    "heal_amount": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 2048
+    },
+    "entities": {
+      "type": "entity_types",
+      "default": []
+    },
+    "affect_group": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "follow_group": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "group": {
+      "type": "group",
+      "default": "$group"
+    },
+    "max_members": {
+      "type": "integer",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "stop_distance": {
+      "type": "number",
+      "default": 3,
+      "min": 0.25,
+      "max": 16
+    }
+  },
+  "share_target": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "group": {
+      "type": "group",
+      "default": "$group"
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "max_members": {
+      "type": "integer",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "overwrite": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "work_block": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    },
+    "blocks": {
+      "type": "materials",
+      "required": true
+    },
+    "work_ticks": {
+      "type": "integer",
+      "default": 40,
+      "min": 1,
+      "max": 72000
+    },
+    "produce_items": {
+      "type": "stacks",
+      "default": {}
+    },
+    "consume_items": {
+      "type": "stacks",
+      "default": {}
+    },
+    "output": {
+      "type": "enum",
+      "default": "cargo",
+      "values": [
+        "cargo",
+        "world"
+      ]
+    },
+    "capacity": {
+      "type": "integer",
+      "default": 64,
+      "min": 1,
+      "max": 4096
+    },
+    "replace_with": {
+      "type": "block",
+      "default": "unchanged"
+    }
+  },
+  "harvest_crop": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 600,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "speed_modifier": {
+      "type": "number",
+      "default": 1,
+      "min": 0.01,
+      "max": 8
+    },
+    "range": {
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 32
+    },
+    "arrival_distance": {
+      "type": "number",
+      "default": 1.5,
+      "min": 0.25,
+      "max": 4
+    },
+    "repath_interval": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "vertical_range": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 8
+    },
+    "scan_budget": {
+      "type": "integer",
+      "default": 128,
+      "min": 1,
+      "max": 1024
+    },
+    "blocks": {
+      "type": "materials",
+      "default": [
+        "WHEAT",
+        "CARROTS",
+        "POTATOES",
+        "BEETROOTS",
+        "NETHER_WART",
+        "SWEET_BERRY_BUSH"
+      ]
+    },
+    "work_ticks": {
+      "type": "integer",
+      "default": 40,
+      "min": 1,
+      "max": 72000
+    },
+    "produce_items": {
+      "type": "stacks",
+      "default": {}
+    },
+    "consume_items": {
+      "type": "stacks",
+      "default": {}
+    },
+    "output": {
+      "type": "enum",
+      "default": "cargo",
+      "values": [
+        "cargo",
+        "world"
+      ]
+    },
+    "capacity": {
+      "type": "integer",
+      "default": 64,
+      "min": 1,
+      "max": 4096
+    },
+    "replant": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "timed_despawn": {
+    "interval": {
+      "type": "integer",
+      "default": 20,
+      "min": 1,
+      "max": 1200
+    },
+    "cooldown": {
+      "type": "integer",
+      "default": 100,
+      "min": 0,
+      "max": 72000
+    },
+    "duration": {
+      "type": "integer",
+      "default": 1200,
+      "min": 1,
+      "max": 72000
+    },
+    "animations": {
+      "type": "animations",
+      "default": {}
+    },
+    "drop_cargo": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+info:
+  namespace: _iainternal
+font_images:
+  parchment_v4_guide_rail:
+    path: gui/scrollable/scrollbar/guide_rail
+    suggest_in_command: false
+    y_position: -130
+  parchment_v4_player_inventory:
+    path: gui/scrollable/inventory/player_grid
+    suggest_in_command: false
+    y_position: -125
+  parchment_v4_crafting_preview:
+    path: gui/scrollable/recipes/crafting
+    suggest_in_command: false
+    y_position: 36
+  parchment_v4_cooking_preview:
+    path: gui/scrollable/recipes/cooking
+    suggest_in_command: false
+    y_position: 36
+  parchment_v4_anvil_repair_preview:
+    path: gui/scrollable/recipes/anvil_repair
+    suggest_in_command: false
+    y_position: 36
+  parchment_v4_smithing_preview:
+    path: gui/scrollable/recipes/smithing
+    suggest_in_command: false
+    y_position: 36
+  parchment_v4_no_recipe_preview:
+    path: gui/scrollable/recipes/no_recipe
+    suggest_in_command: false
+    y_position: 36
+  parchment_v4_furnace:
+    path: gui/scrollable/workstations/furnace
+    suggest_in_command: false
+    y_position: -4
+  parchment_v4_blast_furnace:
+    path: gui/scrollable/workstations/blast_furnace
+    suggest_in_command: false
+    y_position: -4
+  parchment_v4_smoker:
+    path: gui/scrollable/workstations/smoker
+    suggest_in_command: false
+    y_position: -4
+items:
+  icon_back_purple:
+    enabled: true
+    display_name: display-name-icon_back_purple
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+        - icons/icon_back_purple

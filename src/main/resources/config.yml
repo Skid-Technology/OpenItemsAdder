@@ -1,0 +1,585 @@
+# Managed automatically. Do not change this version.
+config_version: 1
+metrics: true
+# New /ia GUI with the current pack: Bundle scrolling on supported Java clients,
+# clickable scrollbar controls on older clients. Set false for the original paginated GUI.
+ia_gui_scrollable: true
+# Recreate the Inventory label only while F shows the real inventory.
+# The new GUI always hides the native caption and uses shifted text for its lower labels.
+# Also forces resource_pack.inventory_title to "", hiding the native caption globally.
+# Requires /iazip and the updated client pack.
+ia_gui_scrollable_inventory_title: true
+# Requires a server restart to start a new update check.
+update_checker: true
+nativepackets:
+  # Automatically download missing/incompatible NativePackets. Changes require a server restart.
+  # If false, install it manually in plugins: https://github.com/LoneDev6/NativePackets-Releases/releases/latest
+  auto_download: true
+config_files:
+  lang: 'en'
+  dictionaries_lang: 'en'
+# Reload with /iareload. External hosting still requires publishing the ZIP.
+pack_hosting:
+  # none, simple_self_host, self_host, external_host, lobfile, auto_external_legacy
+  # To use LobFile, set method: lobfile. Its API key remains in secret.yml.
+  method: simple_self_host
+  # Shared by self_host and simple_self_host. Provider protection overrides take precedence.
+  protection:
+    max_concurrent_downloads_per_ip: 5
+    # Per download, in MiB/s (1024 x 1024 bytes). Must be greater than zero.
+    max_speed_mib_per_second: 30
+    # Checks Minecraft HTTP headers; does not authenticate the client.
+    require_minecraft_headers: true
+    rate_limit:
+      enabled: true
+      # Requests per IP, shared by all players behind that address.
+      max_requests: 10
+      period_seconds: 2
+      cooldown:
+        enabled: true
+        # Rejected requests before a temporary block; requests during the block do not extend it.
+        after_rejections: 5
+        duration_minutes: 30
+  simple_self_host:
+    server_address: 'auto'
+  self_host:
+    server_ip: '127.0.0.1'
+    pack_port: 8163
+    append_port: true
+  external_host:
+    url: ''
+    skip_url_file_type_check: false
+# Changes require /iazip and the updated pack on players' clients.
+resource_pack:
+  extract_internal_utility_assets: true
+  # Client 1.21.4+: hide the back slot highlight in all inventories, keeping the faint vanilla front highlight.
+  # Set false to leave highlight textures unchanged. Requires /iazip and the updated client pack.
+  hide_slot_highlight: true
+  # Global Inventory caption in every container. null keeps vanilla; "" hides it.
+  # The original localized caption remains available as itemsadder.container.inventory.
+  # Forced to "" when ia_gui_scrollable or ia_gui_scrollable_inventory_title is enabled.
+  # Requires /iazip and the updated client pack.
+  inventory_title: null
+  obfuscation:
+    zip_entries: true
+    zip_archive: true
+    png: true
+    short_texture_references: true
+  json:
+    compress: true
+  png:
+    compress: true
+  shaders:
+    compress: true
+    validate: true
+  sounds:
+    compress: true
+    # 1-100. 100 uses the encoder default bitrate; it is not lossless.
+    quality_percent: 100
+  font_images:
+    # Combine small font images into sheets to reduce client pack loading CPU.
+    # Vanilla item glyphs use the server's Minecraft version, downloaded once from Mojang and cached.
+    # Disable if another resource pack must override the individual font textures.
+    optimize_using_sheets: true
+  models:
+    # Compatible external item definitions are merged for supported 1.21.4+ clients.
+    # IA uses its assigned integer CMDs; external rules remain active for other values.
+    # Conflicting/unsupported definitions are left at their existing precedence with a warning.
+    fix_1_21_11_plus_atlas_items_models:
+      enabled: true
+      # Usually unnecessary. Fallback for models not found by automatic detection.
+      # List vanilla material names (e.g. paper), not model file paths.
+      force_fix_models: []
+    fix_dark_in_inventory: true
+    fix_missing_particle: true
+  custom_blocks:
+    note: true
+    # Enable mob-head note block states. Custom models require client 1.20.2+ (pack overlays).
+    enable_1_20_states_350: false
+    # Enable note block trumpet states for clients 26.1.1+. Older clients cannot render them.
+    enable_26_1_states_200: false
+    chorus: true
+    mushroom: true
+    wire: false
+    entity: true
+    fire: false
+    # Uses vanilla block items for REAL, REAL_NOTE and REAL_TRANSPARENT.
+    # Existing PAPER items are converted when accessed; disabling does not reverse conversion.
+    use_block_material_in_inventory: true
+  custom_entities:
+    enabled: true
+    emotes:
+      enabled: true
+      # Use legacy armor stands for player emotes. false uses V2 item displays on supported versions.
+      use_armorstands: true
+      # Required for 1.21.9+ clients; legacy animations can still use armor stands.
+      1_21_4_plus_modern_method: true
+      # Kept for older configurations; this shader only applies to 1.21.5-1.21.8 clients.
+      1_21_5_to_1_21_9_shaders: false
+      1_21_4_lower_legacy_shaders: false
+  custom_armors_shaders_legacy:
+    vanilla:
+      overwrite_leather_layers: true
+      generate_shader:
+        1_21_4_lower: true
+        1_21_5_plus: true
+    generate_optifine_cit_1_20_4_lower: false
+  custom_block_sounds:
+    # Generates the pack patch and enables its matching server-side sound handling.
+    enabled: true
+    non_step: true
+    step: true
+  font:
+    # Set to false to disable font replacement without affecting font images.
+    enabled: true
+    # vanilla, thin, custom
+    mode: vanilla
+    custom:
+      name: "ipaexg.ttf"
+      oversample: 2.0
+      shift: [0, 0]
+      size: 11.0
+  text_effects:
+    enabled: true
+    legacy_colors_compatibility: true
+  # Shader fallback for old clients; requires /iazip and the updated pack.
+  scoreboard:
+    hide_numbers_old_clients: false
+  # Allows font images to work when Force Unicode Font is enabled in the client.
+  enable_font_images_with_force_unicode: true
+  auto_fix_pre_1_21_2_shaders: true
+  # Starting CustomModelData value for newly assigned item IDs; cached IDs are unchanged.
+  # ALL is the default for every material; material names such as DIAMOND override it.
+  custom_model_data_starting_value:
+    ALL: 10000
+    DIAMOND: 11000
+  contents_folders_priority:
+  - vanilla
+  - _iainternal
+  merge_other_plugins_resourcepacks_folders:
+    enabled: true
+    list:
+    - "ModelEngine/resource pack"
+  ignore_files_ext:
+  - db
+  - yml
+  - xcf
+  - psd
+  - html
+  - gz
+  - rar
+  - zip
+  - 7z
+  ffmpeg:
+    enabled: true
+    download: true
+  # Converts content configuration files. Disabling does not undo prior conversions.
+  content_conversion:
+    legacy_armor:
+      append_equipment: false
+      full_conversion:
+        enabled: false
+        material: IRON
+    furniture_to_item_display: false
+    auto_update_transformations: true
+    resource_to_graphics: false
+# Reload with /iareload; changes apply to subsequent pack requests.
+pack_delivery:
+  uuid: "d69238f2-b7ce-30b0-8262-17cd9490f29d"
+  # Clients without a loaded ItemsAdder pack see vanilla diamond armor for custom equipment.
+  # Requires ItemsAdder-managed delivery; none hosting cannot know whether an external pack loaded.
+  show_fallback_armor_on_pack_not_loaded: true
+  # universal or per_client_version. Uses the existing universal ZIP.
+  delivery_mode: per_client_version
+  sound_packs:
+    # Global override: false ignores all content pack_settings.sound_packs rules.
+    # Regenerate with /iazip after changing this setting.
+    enabled: true
+  shader_packs:
+    # Send all shaders and post_effect files in one optional pack after the base pack.
+    # Uses overlays, so the shader pack is shared by supported client versions.
+    # Requires derived-pack hosting; external_host and none use the complete pack.
+    enabled: true
+  # Families follow ItemsAdder overlay boundaries. Prepared before application; false uses universal.
+  # Also limits V2 equipment derivatives; universal retains the matching equipment overlays.
+  # Enabled families cannot enter the world until their pack is published; failures never use universal.
+  # With auto_apply.before_join, pending variants wait in the client's configuration screen.
+  # Unknown clients and hosting without derived-file publication also use universal.
+  per_client_version:
+    1_20_5_to_1_21_1: true
+    1_21_2_to_1_21_3: true
+    '1_21_4': true
+    '1_21_5': true
+    1_21_6_to_1_21_10: true
+    '1_21_11': true
+    '26_1': true
+    '26_2': true
+    '26_3': true
+  auto_apply:
+    # Controls automatic application both before and after joining.
+    enabled: true
+    before_join: true
+    # Used when applying the pack after joining.
+    delay_ticks: 1
+  kick_player_on_decline: true
+  kick_player_on_fail: true
+  show_loading_title: true
+  protect_player:
+    # Attacks by and against protected players are always blocked while loading.
+    cancel_commands: true
+    cancel_teleport: true
+    movement:
+      cancel_events: true
+      # Immobilizes the player using a client entity and hides them from other players.
+      lock_using_entity: true
+  command_cooldown_seconds: 60
+  allow_other_plugins_resourcepacks: true
+  notify_other_plugins_resourcepacks: true
+# Server settings below use /iareload unless otherwise noted.
+registry_changes:
+  # rejoin, kick, none
+  action: rejoin
+  rejoin:
+    address: auto
+    port: auto
+blocks:
+  worlds:
+  - "*" # Match all worlds
+  - "example_world_*" # Match all worlds that start by "example_world_"
+  - "*_example_nether" # Match all worlds that end by "_example_nether"
+  - "!example_disabled_blocks_world" # Exclude the world "example_disabled_blocks_world"
+  - "!example_disabled_blocks_world_*" # Exclude the worlds that start by "example_disabled_blocks_world_"
+  # Enable this block type in resource_pack.custom_blocks.entity.
+  entity:
+    fallback_vanilla_block: GRAY_CONCRETE
+    max_blocks_per_chunk: 256 # 0 disables the placement limit.
+    max_displays_per_player: 512
+    render_radius_blocks: 48
+    update_interval_ticks: 2
+    warm_slot_timeout_ticks: 40
+  cancel_break_wrong_tool:
+    enabled: true
+    send_actionbar: true
+  # Handles blockstates reserved for custom blocks but missing an ItemsAdder registration.
+  unregistered_blockstates:
+    # restore_vanilla, register_as_custom, none
+    action: restore_vanilla
+    only_new_chunks: false
+  # Restores the expected blockstate of already registered custom blocks.
+  fix_reverted_custom_blockstates:
+    enabled: true
+  # Recovers negative-coordinate block records saved under the wrong chunk by older versions.
+  # Uses only already loaded chunks and leaves ambiguous records untouched.
+  recover_legacy_block_positions:
+    enabled: false
+  fix_floating_blocks: true
+  fix_liquids_flow: true
+  remove_unused_palettes_on_region_save: false
+items:
+  fix_trades_guis_match_custom_items:
+    itemsadder_trade_machines: true
+    vanilla_villagers: false
+    other_plugins: true
+  optimizations:
+    kick_on_quickbar_spam:
+      enabled: true
+      clicks: 6
+      window_ms: 200
+  auto_update:
+    enabled: true
+    fix_unstackable_items_on_click: true
+    enchantment_mode: MERGE
+  # Converts durability data from legacy ItemsAdder v3 items.
+  migrate_legacy_v3_durability: true
+  fix_show_attack_and_damage_as_lore: true
+liquids:
+  enabled: true
+huds:
+  enabled: true
+  force_color:
+    enabled: false
+    color: "#FFFFFF"
+cooldown_bars:
+  enabled: true
+  refresh_ticks: 1
+  bossbar:
+    color: WHITE
+    style: SOLID
+loots:
+  allow_loots_drop_from_spawners_using_silk_touch: true
+compatibility:
+  advanced_enchantments:
+    enable_custom_enchants_in_items_configs: false
+# Automatically disabled when InteractiveChat is installed.
+cache_font_images_and_effects_replacements: true
+font_images:
+  chat:
+    enabled: true
+    add_hover_suggestion: true
+    tab_autocompletion: true
+  command:
+    enabled: true
+    commandblocks: true
+    excluded:
+    - home
+    - sethome
+    - tpa
+  customitem_name_and_lore:
+    enabled: true
+  sign:
+    enabled: true
+  book:
+    enabled: true
+  anvil:
+    enabled: true
+  iaimage_book:
+    max_line_length: 18
+    placeholder_font: "minecraft:default"
+  inventory_title:
+    enabled: true
+  scoreboard_teams:
+    enabled: false
+    update_every_ticks: 3600
+# Runtime channels reload with /iareload; enabling their resource_pack shader requires /iazip.
+text_effects:
+  chat:
+    enabled: true
+  customitem_name_and_lore:
+    enabled: true
+  sign:
+    enabled: true
+  book:
+    enabled: true
+  anvil:
+    enabled: true
+# Runtime scoreboard handling reloads with /iareload.
+scoreboard:
+  hide_numbers: false
+# Runtime settings reload with /iareload; enabling their resource_pack content requires /iazip.
+custom_entities:
+  # -1 uses the world view distance (capped at 70 blocks); positive values set a global default.
+  render_distance: -1
+  # Bundle simultaneous display updates for atomic client application. Adds two wire writes per bundle.
+  # Humanoid equipment always bundles its bones and armor to keep their interpolation synchronized.
+  bundle_packets: false
+  # Armor on custom models with explicit Equipment / Armor bindings.
+  humanoid_equipment: true
+  # Maximum viewer distance for terrain foot IK calculations. 0 disables IK calculation.
+  terrain_feet_view_distance: 10
+  # Full ragdoll detail is simulated while a visible viewer is within this distance.
+  # Distant ragdolls park only after they have settled on the sampled ground.
+  ragdoll_near_detail_distance: 30
+  emotes:
+    third_person_view: false
+    match_player_scale: true
+    # Show a short V2 player-skin ragdoll with the orbit camera before respawn.
+    # Requires modern player emotes and a 1.21.4+ client/server.
+    ragdoll_on_death: false
+    # Delay the death menu while the player ragdoll is visible (0 disables the delay).
+    # Movement, jump or sneak skips the wait once the ragdoll settles.
+    death_screen_delay_seconds: 6
+    # Skip the death menu and respawn automatically after the delay above.
+    auto_respawn: false
+  max_per_chunk: 5
+  # Reduces packet traffic but may make animations less smooth.
+  delay_packets: false
+  # Smooths V2 player disguises against delayed movement packets.
+  disguises_lag_compensation: true
+entities:
+  furniture:
+    max_per_chunk: 30
+crops:
+  avg_seconds_per_stage: 240
+  max_crops_in_area: 1000
+  area_limit_blocks_radius: 32
+  interaction:
+    # Improves selection of custom crop hitboxes over nearby vanilla blocks.
+    precise_hitbox_targeting: true
+    # Helps consecutive crop harvesting while holding the attack button.
+    continuous_harvesting_assistance: true
+  rendering:
+    tick_interval: 2
+    max_shown_per_player: 1400
+    radius_blocks: 32
+    billboard:
+      enabled: true
+      distance: 10
+    fov_render_limit: false
+    checkerboard_pattern:
+      enabled: true
+      distance: 8
+recipes:
+  crafting:
+    enabled: true
+  cooking:
+    enabled: true
+  anvil:
+    enabled: true
+  smithing:
+    enabled: true
+  custom_recipes:
+    unlock:
+      all_on_join: false
+      automatically: true
+  # Requires a server restart.
+  remove_vanilla_recipes:
+    enabled: true
+    list:
+      DIAMOND_SWORD: false
+      IRON_INGOT: false
+  fix_packet_too_large_kick: false
+  hide_vanilla_unrecognized_recipe_errors: true
+  # chat, recipebook (result tooltip), both, none
+  no_permission_message: recipebook
+player_stats:
+  save_type: CUSTOM_NBT # CUSTOM_NBT, PLAYER_DAT
+# Master switch for the configurable diagnostic messages below.
+# Reload with /iareload. Disabling a group preserves its nested preferences.
+logging:
+  enabled: true
+  config_files:
+    enabled: true
+    loading: false
+    reloading: false
+    legacy_empty_files: false
+  performance:
+    enabled: true
+    benchmark: false
+    loading_ms: true
+  items:
+    enabled: true
+    attribute_modifiers_loading: false
+    loading: false
+    loaded: false
+    custom_model_data: false
+    loading_empty: false
+    loading_disabled: false
+    warnings: false
+  graphics:
+    enabled: true
+    loading: false
+  armors:
+    enabled: true
+    loading: false
+    generation: false
+  font_images:
+    enabled: true
+    loading: false
+    loading_empty: false
+    detected: false
+  huds:
+    enabled: true
+    loading: false
+    loading_empty: false
+    loading_disabled: false
+    triggers: false
+  loots:
+    enabled: true
+    loading: false
+    loading_empty: false
+    loading_disabled: false
+  liquids:
+    enabled: true
+    loading: false
+  sounds:
+    enabled: true
+    loading: false
+    loading_empty: false
+    loading_disabled: false
+  entities:
+    enabled: true
+    bones_spawning: false
+    loading: false
+  entity_populators:
+    enabled: true
+    loading: false
+    loading_empty: false
+    loading_disabled: false
+  categories:
+    enabled: true
+    missing_items: false
+    icon_failed_load: false
+    single_loaded: false
+    single_loaded_overwrite: false
+    single_skip: false
+    total_loaded: true
+    file_loaded: false
+  recipes:
+    enabled: true
+    fix_packet_too_large: false
+    crafting:
+      enabled: true
+      loading: false
+      loading_disabled: false
+    cooking:
+      enabled: true
+      loading: false
+      loading_disabled: false
+    smithing:
+      enabled: true
+      loading: false
+      loading_disabled: false
+    anvil:
+      enabled: true
+      loading: false
+      loading_disabled: false
+    loading_empty: false
+    removed_vanilla: false
+  scripts:
+    enabled: true
+    loading: false
+    loading_empty: false
+    loading_disabled: false
+    compilation: true
+    execution: true
+  translations:
+    enabled: true
+    dictionaries_loading: false
+    minecraft_lang_overwrite_loading: false
+  resource_packs:
+    enabled: true
+    compression:
+      enabled: true
+      duplicate_textures: false
+      files: false
+      overlays: false
+    non_standard_rotations: true
+    player_install: false
+  world_generation:
+    enabled: true
+    blocks_populators:
+      enabled: true
+      generation: false
+      loading: false
+      loading_disabled: false
+      loading_no_populators: false
+    cave_decorators:
+      enabled: true
+      generation: false
+      loading: false
+      loading_disabled: false
+      loading_no_decorators: false
+    surface_decorators:
+      enabled: true
+      generation: false
+      loading: false
+      loading_disabled: false
+      loading_no_decorators: false
+    trees_populators:
+      enabled: true
+      generation: false
+      loading: false
+      loading_disabled: false
+      loading_no_populators: false
+  blocks:
+    enabled: true
+    save_load:
+      enabled: false
+      min_ms: 0
+    convert_vanilla_blocks: false
+    fix_bugged_blocks: false
+    unknown_block_break: false
+    unusual_block_break: false
+  player_stats:
+    enabled: true
+    save: false

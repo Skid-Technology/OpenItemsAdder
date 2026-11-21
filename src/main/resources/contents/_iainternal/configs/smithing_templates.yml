@@ -1,0 +1,7 @@
+info:
+  namespace: _iainternal
+font_images:
+  smithing_template:
+    path: gui/legacy/default/smithing_template
+    suggest_in_command: false
+    y_position: 47

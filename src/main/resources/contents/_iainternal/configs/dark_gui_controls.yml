@@ -1,0 +1,38 @@
+info:
+  namespace: _iainternal
+items:
+  dark_gui_back:
+    enabled: true
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+      - gui/scrollable/buttons/back
+  dark_gui_previous:
+    enabled: true
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+      - gui/scrollable/buttons/previous
+  dark_gui_next:
+    enabled: true
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+      - gui/scrollable/buttons/next
+  dark_gui_search:
+    enabled: true
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+      - gui/scrollable/buttons/search
+  dark_gui_get:
+    enabled: true
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+      - gui/scrollable/buttons/get

@@ -1,0 +1,11 @@
+info:
+  namespace: _iainternal
+font_images:
+  scrollable_parchment_panel:
+    path: gui/scrollable/panels/catalog_scrollable
+    suggest_in_command: false
+    y_position: 36
+  scrollable_parchment_single_panel:
+    path: gui/scrollable/panels/catalog
+    suggest_in_command: false
+    y_position: 36

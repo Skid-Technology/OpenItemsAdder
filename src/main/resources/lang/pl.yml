@@ -1,0 +1,170 @@
+cannot-break-with-this-tool: '&cNie możesz zniszczyć tego tym narzędziem'
+cannot-repair: '&cTen przedmio nie może być naprawiony'
+repaired-successfully: '&aPrzedmiot został naprawiony pomyślnie!'
+cannot-set-durability: '&cNie można ustawić wytrzymałości!'
+set-durability-successfully: '&aWytrzymałość została ustawiona pomyślnie!'
+crafting-no-recipe: '&eBrak receptury wytwarzania'
+given-item: '&aDodano &e{item} &ado ekwipunku &e{player}'
+removed-item: '&aUsunięto &e{item} &az ekwipunku &e{player}'
+lost-item: '&aStraciłeś &e{item}'
+item-not-found: '&cPrzedmiot&3{item} &cnie istnieje'
+items-count: '&bLiczba przedmiotów: &a{count}'
+lore-usages: '&7Użycia: {value}'
+lore-durability: '&7Wytrzymałość: {value} / {max}'
+model-id: '&bModel ID: {value}'
+name-config: '&bNazwa w configu: '
+no-craft-permission: '&eNie masz permisji do stworzenia tego przedmiotu!'
+no-permission: '&cNie masz permisji do użycia tej komendy!'
+no-permission-detail: '&cNie masz permisji &e{permission}'
+no-permission-short: '&cBrak permisji'
+now-playing: '&fOdtwarzanie: {value}'
+obtained-item: '&aOtrzymano przedmiot &e{item}'
+dropped-item-coords: '&aUpuszczono &e{item} &ana koordynatach {coords}'
+dropped-item-player: '&aUpuszczono &e{item} &akoło gracza {player}'
+player-full-inventory: '&cEkwipunek gracza jest pełny!'
+player-offline: '&eTen gracz jest offline'
+prefix: '[ItemsAdder] '
+resourcepack-error: '&4AWystąpił problem podczas włączania resourcepacka. Proszę skontaktuj się z adminem lub wyłącz resourcepack.'
+resourcepack-error-failed-download: '&4Failed to download resourcepack. Check your CLIENT log to know the reason.'
+resourcepack-error-failed-reload: '&4Failed to reload/apply resourcepack. There might be an issue with your game or the pack is not compatible.'
+resourcepack-error-discarded: '&4Failed to apply resourcepack. Your game discarded the pack for some reason.'
+resourcepack-error-invalid-url: '&4Failed to apply resourcepack. Invalid URL, contact admins.'
+resourcepack-kick-declined: '&4Musisz zaakceptować Resource Pack! Upewnij się że Paczki zasobów serwera są włączone'
+resourcepack-apply-title: '&a&lStosowanie resourcepacka...'
+resourcepack-apply-subtitle: '&6Bądź cierpliwy, to zajmie tylko chwilę!'
+resourcepack-popup-message: |-
+  &6Welcome &b{player}, &6please accept the resourcepack to enjoy all the amazing features of our server.
+   &aYou need to download it only once.
+wrong-command-usage: '&cZłe użycie komendy'
+emoji-gui-title: '&3&lLista Emoji'
+fuel-indicator: '&b&lPaliwo: {value}/{max}'
+get-from-trade-machine: '&fOtrzymaj z maszyny wymiany'
+ia-button-blocks-populators: '&fInformacja o generacji:'
+worlds: '&bŚwiat:'
+info: '&bInfo:'
+chance: '&f   Szansa: &7{value}%'
+amount: '&f   Ilość: &7{value}'
+min-height: '&f   Min Wysokość: &7{value}'
+max-height: '&f   Max Wysokość: &7{value}'
+biome: '&f   Biom:'
+drops-itself: '&e   Wypada samo z siebie'
+fuel-item: '    &b{type} &7+{amount}'
+iarecipe-wrong-usage: '&cZłe użycie komendy. Poprawne użycie: &e/iarecipe <item name>&c, &alub trzymaj przedmiot w dłoni'
+iarecipe-no-custom-item: '&cTo nie jest niestandardowy przedmiot! Trzymaj niestandardowy przedmiot w dłoni &alub użyj komendy: &e/iarecipe <item name>'
+anvil-repair-info: '&fMateriał napraw'
+ia-title-menu-categories: '&3&lKategorie'
+ia-button-search: '&fWyszukaj...'
+ia-button-back: '&fWróć'
+ia-button-next-page: '&fKolejna strona->'
+ia-button-previous-page: '&f<-Poprzednia strona'
+ia-button-next-recipe: '&fKolejna receptura'
+ia-button-previous-recipe: '&fPoprzednia receptura'
+ia-search-results: '&bRezultat wyszukiwań'
+ia-smeling: '&fPrzepalanie'
+ia-smelting: '&fEdytuj przedmiot'
+ia-button-get-item: '&fOtrzymaj przedmiot'
+ia-vanilla-type: '&fVanilla type'
+ia-model-id: '&fModel ID'
+ia-title-crafting-view: '&fMenu główne'
+player-stat-value-read: '&eValue: &b{value}'
+player-stat-value-write: '&eValue changed!'
+player-stat-value-write-bypass: '&cPlayer has bypass permission. &cValue NOT changed'
+player-stat-value-write-bypass-self: '&cYou have bypass permission. &cValue changed anyway because you executed the command on yourself.'
+ia-button-loot-blocks: '&fWypada z bloku'
+ia-button-loot-mobs: '&fWypada z moba'
+ia-button-loot-fishing: '&fWypada z rybactwa'
+ia-button-vehicle-fuel-items: '&ePrzedmioty paliw'
+ia-button-seed-result: '&fWypada z nasion'
+nbt-rule: '&f   {rule}: &7{value}'
+resourcepack-not-ready: '&6Resourcepack nie jest gotowy.'
+custom-entity-summon: '&aStworzono &6{entity} &ana koordynatach &7{coords}'
+custom-entity-kill: '&aZabito &6{entity} &7x{amount} &aw załadowanych chunkach'
+custom-entity-kill-all: '&aZabito &7x{amount} &aniestandardowych potworów w niezaładowanych chunkach'
+custom-entity-not-found: '&cNie można znaleźć potwora &6{entity}'
+liquid-analyzer-low-level: '&ePoziom cieczy jest za niski. Sprawdź źródło'
+liquid-analyzer-no-liquid: '&cTo nie jest ciecz'
+liquid-bucket-place-near-error: '&cNiestandardowa ciecz znajduje się za blisko. Postaraj się utrzymać dystans'
+command-ingame-only: '&cNie możesz użyć tej komendy w konsoli! Użyj jej w grze'
+rightclick-a-block: '&6Naciśnij prawy przycisk myszy na miejscu postawienia drzewa'
+spawned-tree: '&aPomyślnie postawiono drzewo!'
+spawned-tree-error: '&cNie można tutaj postawić drzewa!'
+tree-not-found: '&cDrzewo &3{item} &cnie istnieje'
+played-totem-animation: '&aPuszczono animacje totemu &e{totem} &agraczowi &e{player}'
+played-sound: '&aZagrano dźwięk &e{sound} &7(jeśli istnieje) &agraczowi &e{player}'
+please-wait-events-cooldown: '&cPoczekaj &6{interval} &cby użyć tego przedmiotu.'
+player-stat-value-insufficient: '&cNiewystarczająco {stat}! &7Potrzebujesz {rule}'
+tripwires-disabled: '&cTripwires are disabled on this server.'
+font-image-chat-hover: "&fEmoji: {font_image} \nUsage: &7{placeholder} \n\n&eHINT: \n&7You can use the &e/e &7command to send public \nmessages/commands with emojis easier. \nWrite the emoji name and press &eTAB. \n \nExamples: \n&e/e Hello smile \n&7prints &fHello {placeholder} \n \n&e/e /tell Notch Hello smile \n&7sends the command &f/tell Notch Hello {placeholder}"
+ia-button-surface-decorators: '&fSpawn info'
+ia-button-trees-populators: '&fSpawn info'
+cooldown-bossbar-title: '&fCooldown'
+warning-crafter-broken-hopper: '&cA CRAFTER has been broken because a HOPPER was trying to move a custom item. This is not allowed.'
+player-not-found: <color:#ff4d4d>✘ Player '<color:#4dd2ff>{player}</color>' not found.</color>
+custom-model-data: '<aqua>CustomModelData: <white>{value}</white></aqua>'
+compressing-resourcepack: <color:#4dff4d>Compressing resource pack …</color>
+resourcepack-uploaded-successfully: '<color:#4dff4d>Pack uploaded: <color:#4dd2ff>{url}</color></color>'
+please-wait-command-cooldown: <gradient:#ff8c00:#ff2400>⌛ Please wait <color:#4dd2ff>{interval}</color> before re-using this command.</gradient>
+interact-too-fast: <color:#ff4d4d>✘ You are interacting too quickly. Slow down.</color>
+player-stat-value-not-found: <color:#ff4d4d>✘ Stat '<color:#4dd2ff>{value}</color>' not found.</color>
+max-furnitures-vehicles-reached: <color:#ff4d4d>✘ Chunk limit reached (<color:#4dd2ff>{value}</color>). Remove entities first.</color>
+liquid-not-completely-registered: <color:#ff4d4d>✘ Liquid '<color:#4dd2ff>{liquid}</color>' is not fully registered. Ask an admin to restart.</color>
+renamed-successfully: <color:#4dff4d>✔ Item renamed.</color>
+cannot-rename: <color:#ff4d4d>✘ This item can't be renamed.</color>
+colored-successfully: <color:#4dff4d>✔ Color applied.</color>
+invalid-hex-color: '<color:#ff4d4d>✘ Invalid hex: ''<color:#4dd2ff>{color}</color>''.</color>'
+unknown-entity: '<color:#ff4d4d>✘ Unknown entity: ''<color:#4dd2ff>{entity}</color>''.</color>'
+unknown-emote: '<color:#ff4d4d>✘ Unknown emote: ''<color:#4dd2ff>{emote}</color>''.</color>'
+disguise-failed: <color:#ff4d4d>✘ Failed to disguise as '<color:#4dd2ff>{entity}</color>'.</color>
+undisguise-failed-player-not-digsuised: <color:#ff4d4d>✘ Player '<color:#4dd2ff>{player}</color>' is not disguised.</color>
+undisguised: <gray>You are now undisguised.</gray>
+not-disguised: <yellow>You are not disguised.</yellow>
+custom-entities-disabled: <color:#ff4d4d>✘ Custom entities are disabled in '<color:#4dd2ff>config.yml</color>'.</color>
+custom-entity-cannot-spawn-peaceful: '<color:#ffcc4d>⚠ Nie można przywołać niestandardowej jednostki ''<color:#4dd2ff>{entity}</color>'': jej jednostka bazowa <color:#4dd2ff>{type}</color> nie jest dozwolona na poziomie Pokojowym.</color>'
+emotes-disabled: <color:#ff4d4d>✘ Emotes are disabled in '<color:#4dd2ff>config.yml</color>'.</color>
+this-animation-cannot-be-used-as-emote: <color:#ff4d4d>✘ This animation cannot be used as an emote.</color>
+no-emote-specified: <color:#ff4d4d>✘ No emote specified.</color>
+no-npc-selected: <color:#ff4d4d>✘ Select an NPC before using this command.</color>
+all-mounts-occupied: <color:#ff4d4d>✘ All mounts are currently occupied.</color>
+no-near-entity-found: <color:#ff4d4d>✘ No nearby entity found.</color>
+disabled-furniture-hitboxes: <color:#ff4d4d>Furniture hitboxes disabled.</color>
+enabled-furniture-hitboxes: <color:#4dff4d>Furniture hitboxes enabled.</color>
+sha1-wait-previous-execution: <color:#4dff4d>Please wait — SHA1 calculation is still in progress…</color>
+sha1-loading: <color:#4dff4d>Calculating SHA1 for the resource pack…</color>
+plugin-reloaded-successfully: <gradient:#4dff4d:#4dd2ff>✔ Plugin reloaded successfully.</gradient>
+server-content-changed-join-again: <gradient:#4dff4d:#4dd2ff>Server content changed — please re-join.</gradient>
+ia-cleancache-regenerate-pack: '<color:#4dff4d>Regenerate the resource pack now: <color:#4dd2ff>{url}</color></color>'
+ia-cleancache-removed-blocks: <color:#4dff4d>Removed <color:#4dd2ff>{count}</color> blocks from cache. See console for details.</color>
+hosting-privacy-policy-accepted: <color:#4dff4d>✔ Privacy policy accepted.</color>
+hosting-privacy-policy-declined: |
+  <color:#ff4d4d>You declined the privacy policy.
+  <gray>Edit '<color:#4dd2ff>config.yml</color>' to select another hosting method.</gray>
+hosting-privacy-policy-ask: |
+  <yellow>Please accept the privacy policy.
+  Click to read: <color:#4dd2ff>{url}</color>
+  Then use <color:#4dd2ff>/acceptprivacy</color>.
+  To decline: disable <color:#4dd2ff>{provider}</color> in <color:#4dd2ff>config.yml</color> and run <color:#4dd2ff>/iareload</color>.
+hosting-privacy-policy-title: <gradient:#cd72fe:#4dd2ff><bold>—[ Privacy Policy ]—</bold></gradient>
+hosting-privacy-policy-content: <yellow>Accept the policy via buttons or commands to enable automatic uploads.</yellow>
+no-host-apply-selected: |
+  <color:#ff4d4d>Warning: '<color:#ffe14d>no-host</color>' selected in config.yml.
+  <color:#ff4d4d>The resource pack isn't hosted anywhere. Enable one of the hosting options.</color>
+external-pack-host-guide: |
+  <color:#ff4d4d>READ HERE: http://a.devs.beer/ia-dropbox-guide</color>
+  <color:#ffe14d>1.</color> <color:#ffe14d>Upload the</color> <color:#4dd2ff>{file}</color> <color:#ffe14d>file to DropBox!</color>
+  <color:#ffe14d>2.</color> <color:#ffe14d>Change the</color> <color:#4dd2ff>url</color> <color:#ffe14d>in</color> <color:#4dd2ff>config.yml</color> <color:#ffe14d>(if is different)</color>
+  <color:#ffe14d>3.</color> <color:#ffe14d>Run</color> <color:#4dd2ff>/iareload</color> <color:#ffe14d>to refresh the plugin</color>
+  <color:#ffe14d>4.</color> <color:#ffe14d>Run</color> <color:#4dd2ff>/iatexture all</color> <color:#ffe14d>to refresh the pack for all players</color>
+no-host-pack-guide: |
+  <color:#ff4d4d>Warning: '<color:#ffe14d>no-host</color>' selected in config.yml.
+  <color:#ff4d4d>You have to handle the pack upload and apply manually or using another plugin.</color>
+confirm-command: <color:#ffe14d>!</color> Run the command again to confirm <color:#4dd2ff>{command}</color>.
+no-host-selected: "<color:#ff4d4d>Warning: you selected <color:#ffe14d>no-host <color:#ff4d4d>in config.yml. The resourcepack is not hosted anywhere. <color:#ff4d4d>Please enable one of the different options in config.yml."
+send-again-to-confirm: "<color:#4dd2ff>Send the <color:#ffe14d>/{alias}</color> command again to confirm. <color:#bfbfbf>(automatically cancelled in 5 seconds)</color>"
+skin-changed: "<color:#4dff4d>Skin changed successfully!"
+unknown-category: "&cUnknown category {name}"
+world-not-found: "<color:#ff4d4d>World not found: <color:#4dd2ff>{world}</color>"
+custom-blocks-type-disabled: "<color:#ff4d4d>Custom blocks of type <color:#ffe14d>{type}</color> are disabled in <color:#4dd2ff>config.yml</color>.</color>"
+crops-view-enabled: "<color:#4dff4d>✔ Crops view enabled.</color>"
+crops-view-disabled: "<color:#ff4d4d>✘ Crops view disabled.</color>"
+max-crops-reached-directions: "<color:#ff4d4d>✘ Crop limit reached for this area. Next available location: <color:#ffe14d>{distance}</color> blocks <color:#4dd2ff>{direction}</color>.</color>"
+max-crops-reached-no-directions: "<color:#ff4d4d>✘ Crop limit reached for this area. Remove some crops or find another location, far from here.</color>"

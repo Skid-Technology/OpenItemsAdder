@@ -1,0 +1,114 @@
+package dev.lone.itemsadder.core;
+
+class EncodedStringX {
+   int dj;
+
+   EncodedStringX(UpdateChecker var1) {
+   }
+
+   @Override
+   public String toString() {
+      byte[] var1 = new byte[50];
+      this.dj = -838753988;
+      var1[0] = (byte)(this.dj >>> 10);
+      this.dj = -1167608519;
+      var1[1] = (byte)(this.dj >>> 23);
+      this.dj = 1948099548;
+      var1[2] = (byte)(this.dj >>> 24);
+      this.dj = 1223404992;
+      var1[3] = (byte)(this.dj >>> 2);
+      this.dj = 1489707942;
+      var1[4] = (byte)(this.dj >>> 4);
+      this.dj = 1422077930;
+      var1[5] = (byte)(this.dj >>> 8);
+      this.dj = -280237700;
+      var1[6] = (byte)(this.dj >>> 14);
+      this.dj = 255298489;
+      var1[7] = (byte)(this.dj >>> 3);
+      this.dj = 317614401;
+      var1[8] = (byte)(this.dj >>> 17);
+      this.dj = 1404794835;
+      var1[9] = (byte)(this.dj >>> 8);
+      this.dj = 170800907;
+      var1[10] = (byte)(this.dj >>> 16);
+      this.dj = -578368088;
+      var1[11] = (byte)(this.dj >>> 5);
+      this.dj = -1987419690;
+      var1[12] = (byte)(this.dj >>> 8);
+      this.dj = 1463925312;
+      var1[13] = (byte)(this.dj >>> 20);
+      this.dj = 312294139;
+      var1[14] = (byte)(this.dj >>> 14);
+      this.dj = 111978383;
+      var1[15] = (byte)(this.dj >>> 13);
+      this.dj = 499029664;
+      var1[16] = (byte)(this.dj >>> 18);
+      this.dj = -711855092;
+      var1[17] = (byte)(this.dj >>> 18);
+      this.dj = 1696842610;
+      var1[18] = (byte)(this.dj >>> 24);
+      this.dj = 1218931140;
+      var1[19] = (byte)(this.dj >>> 12);
+      this.dj = -1761499503;
+      var1[20] = (byte)(this.dj >>> 23);
+      this.dj = -214526166;
+      var1[21] = (byte)(this.dj >>> 12);
+      this.dj = 1581490380;
+      var1[22] = (byte)(this.dj >>> 11);
+      this.dj = 830059635;
+      var1[23] = (byte)(this.dj >>> 19);
+      this.dj = 241808910;
+      var1[24] = (byte)(this.dj >>> 21);
+      this.dj = -708691424;
+      var1[25] = (byte)(this.dj >>> 18);
+      this.dj = 1025352727;
+      var1[26] = (byte)(this.dj >>> 10);
+      this.dj = 1509858523;
+      var1[27] = (byte)(this.dj >>> 22);
+      this.dj = 1878698094;
+      var1[28] = (byte)(this.dj >>> 24);
+      this.dj = 382190503;
+      var1[29] = (byte)(this.dj >>> 3);
+      this.dj = 2081916405;
+      var1[30] = (byte)(this.dj >>> 5);
+      this.dj = -1932340590;
+      var1[31] = (byte)(this.dj >>> 9);
+      this.dj = -1676029058;
+      var1[32] = (byte)(this.dj >>> 10);
+      this.dj = 12997516;
+      var1[33] = (byte)(this.dj >>> 12);
+      this.dj = -1800556738;
+      var1[34] = (byte)(this.dj >>> 13);
+      this.dj = -1171357699;
+      var1[35] = (byte)(this.dj >>> 13);
+      this.dj = 102600192;
+      var1[36] = (byte)(this.dj >>> 20);
+      this.dj = 423558258;
+      var1[37] = (byte)(this.dj >>> 22);
+      this.dj = -1399126213;
+      var1[38] = (byte)(this.dj >>> 21);
+      this.dj = -681891031;
+      var1[39] = (byte)(this.dj >>> 3);
+      this.dj = 1211200407;
+      var1[40] = (byte)(this.dj >>> 3);
+      this.dj = -1211959538;
+      var1[41] = (byte)(this.dj >>> 12);
+      this.dj = 299212396;
+      var1[42] = (byte)(this.dj >>> 18);
+      this.dj = 875641397;
+      var1[43] = (byte)(this.dj >>> 7);
+      this.dj = 1004750876;
+      var1[44] = (byte)(this.dj >>> 11);
+      this.dj = -1651374670;
+      var1[45] = (byte)(this.dj >>> 2);
+      this.dj = -2098886941;
+      var1[46] = (byte)(this.dj >>> 20);
+      this.dj = -105325259;
+      var1[47] = (byte)(this.dj >>> 6);
+      this.dj = 113013885;
+      var1[48] = (byte)(this.dj >>> 15);
+      this.dj = 1710504482;
+      var1[49] = (byte)(this.dj >>> 7);
+      return new String(var1);
+   }
+}

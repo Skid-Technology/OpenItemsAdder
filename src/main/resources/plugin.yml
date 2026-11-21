@@ -1,0 +1,250 @@
+name: ItemsAdder
+author: LoneDev
+main: dev.lone.itemsadder.SimplifiedMain
+version: 5.0.0-beta-8
+build-timestamp: dev
+api-version: 1.14
+prefix: ItemsAdder
+description: Customized Minecraft without client mods!
+website: devs.beer
+load: POSTWORLD
+depend: []
+softdepend:
+  - NativePackets
+  - ViaVersion
+  - WorldGuard
+  - WorldEdit
+  - FastAsyncWorldEdit
+  - GriefPrevention
+  - Towny
+  - Essentials
+  - Realistic_World
+  - EpicWorldGenerator
+  - EpicNetherGenerator
+  - Skript
+  - MythicMobs
+  - PlaceholderAPI
+  - PermissionsEx
+  - LuckPerms
+  - Vault
+  - MMOItems
+  - Slimefun
+  - Orebfuscator
+  - ExecutableItems
+  - Mimic
+  - Citizens
+  - ItemBridge
+  - ModelEngine
+  - Denizen
+  - Vulcan
+cyclicdepend:
+  - AdvancedEnchantments
+libraries:
+  - io.netty:netty-codec-http:4.1.118.Final
+libraries-libby:
+  - org.apache.httpcomponents:httpmime:4.5.14
+  - org.apache.commons:commons-math3:3.6.1
+  - net.sourceforge.streamsupport:speedy-math:1.0.0
+  - org.fusesource.jansi:jansi:2.4.2
+  - com.alibaba:fastjson:2.0.43
+  - com.jayway.jsonpath:json-path:2.8.0
+  - com.jeff-media:armor-equip-event:1.0.3
+  - org.jctools:jctools-core:3.1.0
+  - fr.skytasul:glowingentities:1.4.11
+commands:
+  iaparticle:
+    description: List, preview and stop loaded ItemsAdder particle effects
+    usage: /<command> list [page] | play <namespace:id> [player] | stop [player]
+    permission: "ia.admin.iaparticle"
+  iatexture:
+    aliases: [iatexture, iapack]
+    description: Force the client to reload resourcepack (a player or everyone)
+    usage: /<command> [all|player]
+    permission: "ia.user.iatexture"
+  iaget:
+    description: Get custom item by namespaced id or by id
+    usage: /<command> <itemname> [<amount>]
+    permission: "ia.admin.iaget"
+  iagive:
+    description: Give custom item to player
+    usage: /<command> <player> <itemname> [amount] [silent]
+    permission: "ia.admin.iagive"
+  iadrop:
+    description: Drop custom item at coords or at player location
+    usage: /iadrop <itemname> <player|x y z world> [amount]
+    permission: "ia.admin.iadrop"
+  iaremove:
+    description: Remove custom item from player inventory
+    usage: /<command> <player> <itemname> [amount] [silent]
+    permission: "ia.admin.iaremove"
+  iatag:
+    description: Shows custom item debug info
+    usage: /<command>
+    permission: "ia.admin.iatag"
+  iacustommodeldata:
+    description: Shows custom item CustomModelData
+    usage: /<command>
+    permission: "ia.admin.custommodeldata"
+  iaplayerstat:
+    description: Set a custom player stat (and update HUD) value
+    usage: /<command> <read|write|increment|decrement> <player> <attribute> [value]
+    permission: "ia.admin.iaplayerstat"
+  ia:
+    description: Opens items list GUI (or optionally directly open a category)
+    usage: /<command> [category] [player]
+    permission: "ia.user.ia"
+  iarepair:
+    description: Repairs current item (vanilla or custom)
+    usage: /<command>
+    permission: "ia.admin.iarepair"
+  iarename:
+    description: Rename current item (vanilla or custom). Supports emojis (font_images) and ItemsAdder text-effects.
+    usage: /<command> <name>
+    permission: "ia.admin.iarename"
+  iadurability:
+    description: Modify durability of current item (vanilla or custom)
+    aliases: [iadur]
+    usage: /<command>
+    permission: "ia.admin.iadurability"
+  iareload:
+    description: Reloads configuration files
+    usage: /<command>
+    permission: "ia.admin.iareload"
+  iazip:
+    description: Executes /iareload and generates the resourcepack zip file
+    usage: /<command> [--uncompressed]
+    aliases: [iaz]
+    permission: "ia.admin.iazip"
+  iablock:
+    description: Show info about block you're looking at
+    usage: /<command>
+    permission: "ia.admin.iablock"
+  ialiquid:
+    description: Show info about liquid you're looking at
+    usage: /<command> [x] [y] [z]
+    permission: "ia.admin.ialiquid"
+  iaimage:
+    description: Show list of font images (emojis, huds...)
+    aliases: [iaemoji, emoji, e]
+    usage: /<command>
+    permission: "ia.user.image.gui"
+  iarecipe:
+    description: Show item recipe GUI
+    aliases: [iaguide]
+    usage: /<command> [item name] [player]
+    permission: "ia.user.iarecipe"
+  iaemote:
+    description: Play a custom player animation.
+    aliases: [emote]
+    usage: /<command> <emote|stop|stop-now> [player]
+    permission: "ia.user.iaemote"
+  iahud:
+    description: Force show/hide a HUD manually by namespaced id
+    usage: /<command> [name]
+    permission: "ia.admin.iahud"
+  iainfo:
+    description: Shows info about the plugin
+    usage: /<command>
+    permission: "ia.admin.iainfo"
+  iaspawntree:
+    description: Spawns a custom tree
+    usage: /<command> <namespace>
+    permission: "ia.admin.iaspawntree"
+  iaplaytotemanimation:
+    description: Shows a Totem Of Undying animation
+    aliases: [totemanimation]
+    usage: /<command> <totem> <player> [silent]
+    permission: "ia.admin.iatotemanimation"
+  iaplaysound:
+    description: Play itemsadder sounds. Useful in console since vanilla /playsound is bugged in console.
+    aliases: [playcustomsound]
+    usage: /<command> <soundname> <player> [volume] [pitch]
+    permission: "ia.admin.iaplaysound"
+  iacleancache:
+    description: Cleans unused IDs from cache to allow them to be used by future added blocks / items.
+    usage: /<command> <items|blocks>
+    permission: "ia.admin.iacleancache"
+  iasha1:
+    description: Calculates sha1 of the current resourcepack.
+    usage: /<command> <local|online>
+    permission: "ia.user.iasha1"
+  iahitbox:
+    description: Shows the hitbox of placed furnitures.
+    usage: /<command>
+    permission: "ia.admin.iahitbox"
+  iaconfig:
+    description: Main command to execute some operations on the plugin configurations.
+    usage: /<command>
+    permission: "ia.admin.iaconfig"
+  iaentity:
+    description: Main command to manage custom entities.
+    usage: /<command>
+    permission: "ia.admin.iaentity"
+  iacolor:
+    description: Main command to color items in hand.
+    usage: /<command>
+    permission: "ia.admin.iacolor"
+  iadebug:
+    description: Main command to run some debug actions. Useful only to developers!
+    usage: /<command>
+    permission: "ia.admin.iadebug"
+  iaitem:
+    description: Main command to manage custom items.
+    usage: /<command> <rename|durability|repair|remove|disable-auto-update|update> [args]
+    permission: "ia.admin.iaitem"
+  iadisguise:
+    description: Disguise as a custom entity.
+    usage: /<command> <entityId>
+    permission: "ia.user.disguise"
+  iaundisguise:
+    description: Undisguise from a custom entity.
+    usage: /<command>
+    permission: "ia.user.disguise"
+  crops:
+    description: Enable or disable crops view for a player.
+    usage: /<command>
+    permission: "ia.user.crops"
+permissions:
+  "ia.admin.iaparticle":
+    description: Preview loaded particle effects for yourself or another player.
+    default: op
+  "ia.admin.iaitem.rename":
+    description: Permission to use /iaitem rename.
+  "ia.admin.iaitem.durability":
+    description: Permission to use /iaitem durability.
+  "ia.admin.iaitem.repair":
+    description: Permission to use /iaitem repair.
+  "ia.admin.iaitem.remove":
+    description: Permission to use /iaitem remove.
+  "ia.admin.iaitem.disable-auto-update":
+    description: Permission to use /iaitem disable-auto-update.
+  "ia.admin.iaconfig.item.delete":
+    description: Permission to use /iaconfig item delete <item>. Deletes an item COMPLETELY from its config file. Please be careful.
+  "ia.admin.iaconfig.item.disable":
+    description: Permission to use /iaconfig item disable <item>. Disables an item from its config file. Please be careful.
+  "ia.admin.iaconfig.recipes.deleteofitem":
+    description: Permission to use /iaconfig recipes deleteofitem <item>. Deletes COMPLETELY all recipes which contain an item from all the config files. Please be careful.
+  "ia.admin.iaconfig.recipes.disableofitem":
+    description: Permission to use /iaconfig item disableofitem <item>. Disables all recipes which contain an item from all the config files. Please be careful.
+  "ia.admin.iaconfig.namespace.delete":
+    description: Permission to use /iaconfig namespace delete <namespace>. Deletes all items of a namespace and recipes of these items COMPLETELY. Please be careful.
+  "ia.admin.iaconfig.namespace.disable":
+    description: Permission to use /iaconfig namespace disable <namespace>. Disables every item of a namespace and recipes of these items. Please be careful.
+  "ia.user.ia.categories":
+    description: Permission to use /ia [category]
+  "ia.user.ia.categories.others":
+    description: Permission to use /ia [category] [player]
+  "ia.user.hud.show.*":
+    description: Permission to see huds
+    default: true
+  "ia.user.hud.bypass.triggers.*":
+    description: Stops player huds values from increasing or decreasing based on events.
+    default: false
+  "ia.user.hud.bypass.commands.*":
+    description: Stops the player hud value from increasing or decreasing called by commands.
+    default: false
+  "ia.user.hud.bypass.api.*":
+    description: Stops the player hud value from increasing or decreasing called by API.
+    default: false
+  "ia.admin.iacolor.others":
+    description: Permission to use /iacolor <color> [player]

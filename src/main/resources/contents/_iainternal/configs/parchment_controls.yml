@@ -1,0 +1,11 @@
+info:
+  namespace: _iainternal
+font_images:
+  parchment_controls_show_inventory:
+    path: gui/scrollable/labels/show_inventory
+    suggest_in_command: false
+    y_position: -113
+  parchment_controls_hide_inventory:
+    path: gui/scrollable/labels/hide_inventory
+    suggest_in_command: false
+    y_position: -113
